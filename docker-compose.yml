@@ -1,8 +1,10 @@
-version: '3.4'
+version: '3.7'
 
 services:
-  rentalx:
-    image: rentalx
-    build:
-      context: .
-      dockerfile: ./Dockerfile
+  app:
+    build: .
+    container_name: rentx
+    ports:
+      - 3333:3333
+    volumes:
+      - .:/usr/app
