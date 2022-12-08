@@ -14,6 +14,8 @@ class SpecificationsRepository implements ISpecificationsRepository {
       description,
       name,
     })
+    
+    await this.repository.save(specification);
   }
 
   async findByName(name: string): Promise<Specification | undefined> {
