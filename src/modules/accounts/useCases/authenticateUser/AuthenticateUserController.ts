@@ -2,7 +2,7 @@ import { container } from "tsyringe";
 
 import { AuthenticateUserUseCase } from "./AuthenticateUserUseCase";
 
-export { Request, Response } from "express";
+import { Request, Response } from "express";
 
 class AuthenticateUserController {
   async handle(request: Request, response: Response): Promise<Response> {
